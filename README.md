@@ -61,7 +61,7 @@ To push your changes to the remote repo, you would need the SSH keys set up.
 You can use the command below in `git bash` and get a pair of keys.
 
 ```
-ssh-keygen -t rsa -b 4096 -c <email>
+ssh-keygen -t rsa -b 4096 -C <email>
 ```
 
 **This would generate 2 keys- public and private**
@@ -72,8 +72,10 @@ Login to your account and navigate to settings.
 ![img](./images/ssh-keys.png)
 
 ##  Add private keys to ssh agent.
-    - start ssh agent: `eval "$(ssh-agent -s)"`
-    - `ssh-add <your-key>` or `ssh-add ~/.ssh/key`.
+
+- `start ssh agent: `eval "$(ssh-agent -s)"`
+
+- `ssh-add <your-key>` or `ssh-add ~/.ssh/key`.
 
 # Workflow of changes
 
