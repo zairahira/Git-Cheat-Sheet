@@ -136,6 +136,8 @@ Branches fall into these categories:
 - **Feature branch**: Used when you are adding a feature.
 - **Hot fix branch**: Created for bugs in production releases. Used as a patch for next release cycle.
 
+Branches often start with fix/ or feat/, among others, like commit messages, but they use a forward slash and can't contain spaces. Create a new branch named feat/add-create-table-reference
+
 ## Check which branch you are on.
 `git branch`
 
