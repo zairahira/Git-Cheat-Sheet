@@ -162,12 +162,19 @@ Then you can make chaneges in a branch and then create a PR(Pull Request)
 
 ![img](./images/fork%23.gif)
 
-# Upstream- adding and reviewing upstreams
+# Upstream- adding and reviewing upstreams/ remotes
 ## Add main upstream of original repo
+
+When attached, remote branches tell the repo from where to push and pull the changes.
+
+Remote branches can be added using this syntax:
 
 ```
 git remote add upstream <ssh-of -orignal repo>
 ```
+
+> Note: you can add any other name instead of `upstream` and use it to refer the repo.
+
 Use HTTPS to avoid SSH keys
 
 ```
