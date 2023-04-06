@@ -117,9 +117,9 @@ Clone a repo by going to a specific repo and selecting `https` from `code` butto
 
 # Working on changes from local machine to remote repository
 
-In your current directory, initailize the git repository using `git init`.
+In your current directory, initialize the git repository using `git init`.
 
-To the push changes, create a repo in GitHub.
+To push the changes, create a repo in GitHub.
 - Link the remote repo: `git remote add origin <ssh-link-to-remote-repo>`.
 - Verify of the branch has been added: `git remote -v`. 
 - Push the files and changes: `git push origin main`.
@@ -129,12 +129,12 @@ To the push changes, create a repo in GitHub.
 - Once set, now you can simply use `git push`.
 
 # Git branches
->💡 Tip and a good practice: Always  make changes in a forked branch.
+>💡 Tip and good practice: Always make changes in a forked branch.
 
 Branches fall into these categories:
 - **Main**: The original/main branch.
 - **Feature branch**: Used when you are adding a feature.
-- **Hot fix branch**: Created for bugs in production releases. Used as a patch for next release cycle.
+- **Hotfix branch**: Created for bugs in production releases. Used as a patch for next release cycle.
 
 Branches often start with fix/ or feat/, among others, like commit messages, but they use a forward slash and can't contain spaces. Create a new branch named feat/add-create-table-reference
 
@@ -146,7 +146,7 @@ Branches often start with fix/ or feat/, among others, like commit messages, but
 
 
 ## Switch to an existing branch 
-`git chekout main`.
+`git checkout main`.
 
 ## Push to a feature branch
 `git push origin <feature-branch-name>`
@@ -158,7 +158,7 @@ Branches often start with fix/ or feat/, among others, like commit messages, but
 # Forking
 
 forking creates a copy of the original repo in your account.
-Then you can make chaneges in a branch and then create a PR(Pull Request)
+Then you can make changes in a branch and then create a PR(Pull Request)
 
 ![img](./images/fork%23.gif)
 
@@ -186,7 +186,7 @@ When fetching from upstream,
 - Fetch: `git fetch upstream`.
 - Merge changes: `git merge upstream main`.
 
-> `git pull` does `git fetch upstream` and `git merge upstream main`in one go.
+> `git pull` does `git fetch upstream` and `git merge upstream main` in one go.
 
 ![img](./images/Capture.PNG)
 
