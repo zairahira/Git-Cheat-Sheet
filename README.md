@@ -23,6 +23,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
   - [Switch to an existing branch](#switch-to-an-existing-branch)
   - [Push to a feature branch](#push-to-a-feature-branch)
   - [Delete branches that are not in use](#delete-branches-that-are-not-in-use)
+  - [Checking out Pull Requests](#checking-out-pull-requests)
 - [Forking](#forking)
 - [Upstream- adding and reviewing upstreams](#upstream--adding-and-reviewing-upstreams)
   - [Add main upstream of original repo](#add-main-upstream-of-original-repo)
@@ -154,6 +155,14 @@ Branches often start with fix/ or feat/, among others, like commit messages, but
 ## Delete branches that are not in use
 `git branch -d feature-branch`
 
+## Checking out Pull Requests
+Once you have the codebase cloned locally, you can use this command to test a particular PR:
+
+`git fetch origin pull/<PR-Number>/head:new-branch-name`
+
+Then, checkout the branch and view changes in the PR.
+
+`git checkout new-branch-name`
 
 # Forking
 
