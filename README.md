@@ -164,6 +164,8 @@ Then, checkout the branch and view changes in the PR.
 
 `git checkout new-branch-name`
 
+[Check GH Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/checking-out-pull-requests-locally) for details.
+
 # Forking
 
 forking creates a copy of the original repo in your account.
