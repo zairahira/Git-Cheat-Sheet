@@ -290,8 +290,27 @@ git log --oneline --reverse
 git log --oneline --parents
 
 ```
+`git log --oneline` will display a simplified view of the Git commit history, with each commit summarized on a single line. Here's an example output:
+
+```
+f4a7d83 Add new feature
+62e256c Fix bug in login page
+da8259b Update README.md
+5ca84fd Initial commit
+```
 
 `--parents` prints two columns where the second column shows where the current commit(1st column) orinigated from, i.e the parent.
+
+
+```
+65a7b0f9f 830763da0 (HEAD -> main, origin/main, origin/HEAD) fix: update scripts + remove unused (#49740)
+830763da0 607111978 fix(curriculum) - clearer mongoose install and set up instructions (#49754)
+607111978 803688b62 fix(deps): update prisma monorepo to v4.11.0 (#49758)
+803688b62 1c793d39b fix(deps): update dependency @stripe/stripe-js to v1.49.0
+1c793d39b c94962a82 chore(deps): update dependency joi to v17.8.4
+c94962a82 9710c9ec8 chore(deps): update babel monorepo
+9710c9ec8 04ee95dc3 chore(deps): update automerged always - codesee to v0.536.0
+```
 
 ### Filtering
 These commands filter the logs according to date ranges
