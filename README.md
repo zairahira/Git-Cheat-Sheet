@@ -33,6 +33,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
     - [Revert file after committing changes:](#revert-file-after-committing-changes)
     - [How to Recover Files When Changes Are Staged but Not Committed](#how-to-recover-files-when-changes-are-staged-but-not-committed)
 - [Git commit messages](#git-commit-messages)
+- [Git logs](#git-logs)
 - [Making your organization public.](#making-your-organization-public)
 # Installing GitHub
 
@@ -249,6 +250,59 @@ Some commonly-used conventions.
 
 💡
 [Read the original post on commits here](https://blog.pradumnasaraf.co/getting-started-with-conventional-commits)
+
+# Git logs
+Git logs use 'pager' to navigate and search the logs.
+
+By default, the newest commits are shown at the top.
+
+> Logs show only those commits that lead up to the current branch. They do not show the entries for the entire repo.
+
+### Navigation
+To scroll along the logs, use up and down arrow keys.
+You can also use `j` and `k` as used in `vim`.
+
+To move to the beginning of the log/ first line use `J`(capital J)
+To move to the last line of the log, use `gg`(small`g`)
+
+You can exit by simply pressin `q`.
+
+
+### Formatting
+
+- Reduces commit IDs to short ones:
+```
+git log --abbrev-commit
+```
+
+- Changes the date formats:
+```
+git log --date="short"
+git log --date="iso"
+git log --date="unix"
+
+```
+
+- Change the order or track the parents of a commit:
+```
+git log --oneline
+git log --oneline --reverse
+git log --oneline --parents
+
+```
+
+`--parents` prints two columns where the second column shows where the current commit(1st column) orinigated from, i.e the parent.
+
+### Filtering
+These commands filter the logs according to date ranges
+
+```
+git log --oneline --before="1st April 2023" --after="1st April 2022"
+git log --oneline --since "3 months ago"
+```
+
+#### More details on logs
+You can always refer to the man page for more details: `man git-log`
 
 
 # Making your organization public.
