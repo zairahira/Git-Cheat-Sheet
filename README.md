@@ -28,6 +28,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 - [Upstream- adding and reviewing upstreams](#upstream--adding-and-reviewing-upstreams)
   - [Add main upstream of original repo](#add-main-upstream-of-original-repo)
   - [Push changes to remote](#push-changes-to-remote)
+- [Reverting changes](#reverting-changes)
 - [Additional information](#additional-information)
   - [How to Recover a Deleted File in Git – Revert Changes After a Hard Reset](#how-to-recover-a-deleted-file-in-git--revert-changes-after-a-hard-reset)
     - [Revert file after committing changes:](#revert-file-after-committing-changes)
@@ -207,6 +208,35 @@ When fetching from upstream,
 
 Make sure upstream is configured.
 
+# Reverting changes
+## Restore/ revert commits
+
+- Unstage a file locally
+This would revert `git add .`
+Command:
+
+```
+git restore
+```
+
+- Revert to a particular commit
+
+```
+git reset commit-id-to-revert
+```
+
+- **stash**- If you don't want to commit and don't want to loose the new changes.
+`git stash`
+You can come back to them later.
+
+`git stash pop`
+
+- Remove a commit already pushed to Github:
+	- Find the commit ID
+	- `git reset commit-id` > this would unstage the file.
+	- `git stash` > place those changes in a stash.
+	- Force push(`-f` ) as commits are linked: `git push origin branc-hname -f`
+ 
 #  Additional information
 ## How to Recover a Deleted File in Git – Revert Changes After a Hard Reset
 ### Revert file after committing changes:
