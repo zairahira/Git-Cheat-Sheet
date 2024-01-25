@@ -36,6 +36,17 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 - [Git commit messages](#git-commit-messages)
 - [Git logs](#git-logs)
 - [Making your organization public.](#making-your-organization-public)
+- [Diff changes](##diff-changes)
+- [Undoing before committing](##undoing-before-committing)
+- [Undo after adding to staging](##undo-after-adding-to-staging)
+- [Amending commits](##amending-commits)
+- [Rollbacks - rolling back after pushing changes](##rollbacks---rolling-back-after-pushing-changes)
+- [Identifying the commit id and rolling back](##identifying-the-commit-id-and-rolling-back)
+- [Logging](##logging)
+- [Remotes](##remotes)
+- [Bonus](##bonus)
+
+- 
 # Installing GitHub
 
 - [GitHub for Windows](https://windows.github.com).
@@ -358,3 +369,104 @@ You can always refer to the man page for more details: `man git-log`
 If you have recently joined an organization, you have to make it visible on your profile by setting it to `public` in the settings.
 
 ![img](./images/git.gif)
+
+# Google cloud course
+## Diff changes
+
+```
+git diff
+git diff --staged
+git show commit id
+```
+
+
+## Undoing before committing
+
+Restore modified file before staging
+```
+git checkout your-file.txt
+```
+
+## Undo after adding to staging
+
+```
+git reset 
+```
+```
+# untracked in working tree and no longer staged
+git reset HEAD file-to-unstage
+```
+
+## Amending commits
+
+```
+# amends the commit message of latest commit
+git commit --amend
+```
+you can also stage another file, then `commit --amend` to override the previous commit message.
+
+> use locally only and avoid using remote
+
+## Rollbacks- rolling back after pushing changes
+
+```
+# Revert to last commit
+git revert HEAD
+```
+
+Rolling back with `revert`, deletes the added lines, adds a new commit opposite of the current commit.
+
+commit and revert commit both is shows in logs
+
+## Identifying the commit id and rolling back
+
+```
+git revert commit-id
+```
+
+## Logging
+
+```
+# Shows the graph
+
+git log --graph --oneline
+```
+
+To throw the merge away:
+
+ ```
+# resets to where the merge never happened
+
+ git merge --abort
+```
+
+## Remotes
+
+```
+# Shows remote info
+
+git remote show origin
+```
+**Sync remote and local**
+
+```
+# copies the commits to see what is there
+
+git fetch
+```
+
+```
+# merge the fetch changes
+
+git merge
+```
+
+
+## Bonus
+Reverts pushed changes to github till the commit id
+also removes the history from the UI
+
+```
+git reset --hard c880ed6
+git push -f
+```
