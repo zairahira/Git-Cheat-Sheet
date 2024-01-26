@@ -45,6 +45,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 - [Logging](##logging)
 - [Remotes](##remotes)
 - [Bonus](##bonus)
+- [Combine commits into one commit](#combine-commits-into-one-commit)
 
 - 
 # Installing GitHub
@@ -469,4 +470,49 @@ also removes the history from the UI
 ```
 git reset --hard c880ed6
 git push -f
+```
+
+# Combine commits into one commit
+
+To combine all the commits into a single commit in Git, you can use the "squash" feature in an interactive rebase. This process will rewrite the history of your branch, combining all the commits into a single new commit. Here's how you can do it:
+
+Start an Interactive Rebase:
+First, you need to start an interactive rebase session. If you want to squash all commits from the very beginning of your branch, you need to find the commit hash of the first commit in your branch. Alternatively, you can use HEAD~n syntax, where n is the number of commits you want to squash.
+
+For example, if your branch has 10 commits and you want to squash them all, you can use:
+
+```
+git rebase -i HEAD~10
+Mark Commits to Squash:
+Your default text editor will open with a list of commits, each starting with the word pick. It looks something like this:
+```
+
+
+```
+pick 01d1124 First commit
+pick 6340aaa Second commit
+pick ebfd367 Another commit
+```
+
+
+To squash all commits into the first one, change pick to squash (or just s for short) at the beginning of each line except the first one. It will look like this:
+
+
+```bash
+pick 01d1124 First commit
+squash 6340aaa Second commit
+squash ebfd367 Another commit
+...
+
+Complete the Rebase:
+Save and close the editor. Git will start the rebase process and squash the commits. If there are no conflicts, it will then open up a new editor window to combine the commit messages.
+
+Edit the Commit Message:
+In the new editor window, you'll see all the commit messages combined. Edit them to create a single, new commit message for the squashed commit. Save and close the editor.
+
+Force Push (if necessary):
+If you have already pushed your branch to a remote repository, you will need to force push the changes because you've rewritten the history.
+
+```
+git push origin your-branch-name --force
 ```
