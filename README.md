@@ -1,4 +1,4 @@
- # All the fool-proof important git commands
+# All the fool-proof important git commands
 
 ## 🙏 Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -36,18 +36,17 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 - [Git commit messages](#git-commit-messages)
 - [Git logs](#git-logs)
 - [Making your organization public.](#making-your-organization-public)
-- [Diff changes](##diff-changes)
-- [Undoing before committing](##undoing-before-committing)
-- [Undo after adding to staging](##undo-after-adding-to-staging)
-- [Amending commits](##amending-commits)
-- [Rollbacks - rolling back after pushing changes](##rollbacks---rolling-back-after-pushing-changes)
-- [Identifying the commit id and rolling back](##identifying-the-commit-id-and-rolling-back)
-- [Logging](##logging)
-- [Remotes](##remotes)
-- [Bonus](##bonus)
+- [Diff changes](#diff-changes)
+- [Undoing before committing](#undoing-before-committing)
+- [Undo after adding to staging](#undo-after-adding-to-staging)
+- [Amending commits](#amending-commits)
+- [Rollbacks - rolling back after pushing changes](#rollbacks---rolling-back-after-pushing-changes)
+- [Identifying the commit id and rolling back](#identifying-the-commit-id-and-rolling-back)
+- [Logging](#logging)
+- [Remotes](#remotes)
+- [Bonus](#bonus)
 - [Combine commits into one commit](#combine-commits-into-one-commit)
 
-- 
 # Installing GitHub
 
 - [GitHub for Windows](https://windows.github.com).
@@ -182,12 +181,12 @@ Then, checkout the branch and view changes in the PR.
 
 # Forking
 
-forking creates a copy of the original repo in your account.
+Forking creates a copy of the original repo in your account.
 Then you can make changes in a branch and then create a PR(Pull Request)
 
 ![img](./images/fork%23.gif)
 
-# Upstream- adding and reviewing upstreams/ remotes
+# Upstream- adding and reviewing upstreams
 ## Add main upstream of original repo
 
 When attached, remote branches tell the repo from where to push and pull the changes.
@@ -408,7 +407,7 @@ you can also stage another file, then `commit --amend` to override the previous 
 
 > use locally only and avoid using remote
 
-## Rollbacks- rolling back after pushing changes
+## Rollbacks - rolling back after pushing changes
 
 ```
 # Revert to last commit
