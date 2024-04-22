@@ -45,6 +45,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 - [Logging](#logging)
 - [Remotes](#remotes)
 - [Bonus](#bonus)
+- [Push to someone else's branch](#push-to-someone-else-branch)
 - [Combine commits into one commit](#combine-commits-into-one-commit)
 
 # Installing GitHub
@@ -470,6 +471,19 @@ also removes the history from the UI
 git reset --hard c880ed6
 git push -f
 ```
+
+# Push to someone else's branch:
+
+1. Clone the branch locally:
+`git clone --branch remote-branch-name https://github.com/user-name/repo-name.git`
+
+2. Make changes
+`git add`.
+
+3. Commit and push- make sure you have the rights to push to that branch.
+
+`git push origin remote-branch-name`.
+
 
 # Combine commits into one commit
 
