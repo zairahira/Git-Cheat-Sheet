@@ -45,7 +45,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 - [Logging](#logging)
 - [Remotes](#remotes)
 - [Bonus](#bonus)
-- [Push to someone else's branch](#push-to-someone-else-branch)
+- [Push to someone else's branch](#push-to-someone-elses-branch)
 - [Combine commits into one commit](#combine-commits-into-one-commit)
 
 # Installing GitHub
