@@ -511,7 +511,7 @@ pick ebfd367 Another commit
 To squash all commits into the first one, change pick to squash (or just s for short) at the beginning of each line except the first one. It will look like this:
 
 
-```bash
+````md
 pick 01d1124 First commit
 squash 6340aaa Second commit
 squash ebfd367 Another commit
@@ -526,6 +526,6 @@ In the new editor window, you'll see all the commit messages combined. Edit them
 Force Push (if necessary):
 If you have already pushed your branch to a remote repository, you will need to force push the changes because you've rewritten the history.
 
-```
-git push origin your-branch-name --force
-```
+`git push origin your-branch-name --force`
+
+````
